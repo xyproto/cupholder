@@ -1,4 +1,4 @@
-github.com/xyproto/cdrom v1.0.2 h1:vH+J8HFME4duDiKzVGxKz+bFe1NXS83YrzMnvzPaiSM=
-github.com/xyproto/cdrom v1.0.2/go.mod h1:iUA/aw7V9iTpPgG5Nj2I+FZrTeXadHoBPE+puAX9PC0=
+github.com/xyproto/cdrom v1.2.0 h1:1VfsJl/XMIsYohtnTGEOHDe6qiYCepoogwuyY2MUcas=
+github.com/xyproto/cdrom v1.2.0/go.mod h1:iUA/aw7V9iTpPgG5Nj2I+FZrTeXadHoBPE+puAX9PC0=
 golang.org/x/sys v0.0.0-20200202164722-d101bd2416d5 h1:LfCXLvNmTYH9kEmVgqbnsWfruoXZIrh4YBgqVHtDvw0=
 golang.org/x/sys v0.0.0-20200202164722-d101bd2416d5/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
