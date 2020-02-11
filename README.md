@@ -20,7 +20,7 @@ Use `-s` for silent operation and set the `NO_COLOR` environment variable to dis
 
 ## Screenshot
 
-![Cupholder in action](img/screenshot.png)
+![cupholder in action](img/screenshot.png)
 
 ## General info
 
