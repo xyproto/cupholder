@@ -1,4 +1,4 @@
-# cupholder [![Build Status](https://travis-ci.com/xyproto/cupholder.svg?branch=master)](https://travis-ci.com/xyproto/cupholder) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/cupholder)](https://goreportcard.com/report/github.com/xyproto/cupholder) [![License](https://img.shields.io/github/license/xyproto/cupholder?color=green)](https://raw.githubusercontent.com/xyproto/cupholder/master/LICENSE)
+# cupholder [![Build Status](https://travis-ci.com/xyproto/cupholder.svg?branch=master)](https://travis-ci.com/xyproto/cupholder) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/cupholder)](https://goreportcard.com/report/github.com/xyproto/cupholder) [![License](https://img.shields.io/badge/License-GPL2-brightgreen)](https://raw.githubusercontent.com/xyproto/cupholder/master/LICENSE)
 
 Eject the CD tray, on Linux, using only Go.
 
