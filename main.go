@@ -14,7 +14,7 @@ func ejectDevice(o *textoutput.TextOutput, deviceFilename string) error {
 		return err
 	}
 	fmt.Print(o.LightTags(fmt.Sprintf(
-		"<blue>Ejecting</blue> <lightyellow>%s</lightyellow><blue>...</blue>",
+		"<darkgray>[<blue>%s<darkgray>] <yellow>Ejecting... <off>",
 		deviceFilename)))
 	if err := cd.Eject(); err != nil {
 		o.OutputTags("<red>failed</red>")
@@ -40,7 +40,6 @@ func main() {
 			}
 			var err error
 			for _, deviceFilename := range c.Args().Slice() {
-				fmt.Println(deviceFilename)
 				err = ejectDevice(o, deviceFilename)
 				if err != nil {
 					break
