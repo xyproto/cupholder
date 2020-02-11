@@ -1,16 +1,18 @@
-# Eject
+# Cupholder
 
 Eject the CD tray, on Linux, using only Go.
 
 If you have a server room with many servers with CD ROMs, this can be used for finding a specific server.
 
+It can also be used for providing an additional coffee cup holder to your desktop setup.
+
 ## Usage
 
-    ./eject
+    ./cupholder
 
 Or
 
-    ./eject /dev/cdrom
+    ./cupholder /dev/cdrom
 
 All arguments are treated as device filenames.
 
@@ -18,7 +20,7 @@ Use `-s` for silent operation and set the `NO_COLOR` environment variable to dis
 
 ## Screenshot
 
-![Eject in action](img/screenshot.png)
+![Cupholder in action](img/screenshot.png)
 
 ## General info
 

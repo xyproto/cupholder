@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+const versionString = "cupholder 1.0.0"
+
 func ejectDevice(o *textoutput.TextOutput, deviceFilename string) error {
 	o.Printf("<darkgray>[<blue>eject<darkgray>]\t\t<darkgray>Ejecting <yellow>%s<darkgray>... <off>", deviceFilename)
 
@@ -37,12 +39,17 @@ func ejectDevice(o *textoutput.TextOutput, deviceFilename string) error {
 func main() {
 	o := textoutput.New()
 	if appErr := (&cli.App{
-		Name:  "eject",
+		Name:  "cupholder",
 		Usage: "eject the CD tray (or other trays, given a device file)",
 		Flags: []cli.Flag{
 			&cli.BoolFlag{Name: "silent", Aliases: []string{"s"}},
+			&cli.BoolFlag{Name: "version", Aliases: []string{"V"}},
 		},
 		Action: func(c *cli.Context) error {
+			if c.Bool("version") {
+				o.Println(versionString)
+				os.Exit(0)
+			}
 			// Check if text output should be disabled
 			if c.Bool("silent") {
 				o.Disable()

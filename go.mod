@@ -1,4 +1,4 @@
-module github.com/xyproto/eject
+module github.com/xyproto/cupholder
 
 go 1.10
 
