@@ -24,9 +24,15 @@ Use `-s` for silent operation and set the `NO_COLOR` environment variable to dis
 
 ## Web server
 
-`cupholder` includes a HTTP server that can be launched with the `-l` or `--listen` flag, that lets you eject the CD remotely, just by visiting the HTTP page at port 3280 (`3280 = 0x0CD0`).
+`cupholder` includes a web server that can be launched with the `-l` or `--listen` flag, that lets you eject the CD remotely, just by visiting the HTTP page at port 3280 (`3280 = 0x0CD0`).
 
 ![webpage](img/httpserver.png)
+
+For ejecting the tray using `curl`, a command like this can then be used:
+
+    curl --silent --output /dev/null --write-out '%{http_code}\n' http://localhost:3280/
+
+Replace `localhost` with the hostname or IP address of the server where `cupholder -l` is running.
 
 ## Requirements
 
