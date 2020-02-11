@@ -12,11 +12,16 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
+
 	fmt.Println("Ejecting")
-	cd.Eject()
-	if err := cd.Close(); err != nil {
+
+	if err := cd.Eject(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	fmt.Println("DONE")
+
+	if err := cd.Done(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 }
