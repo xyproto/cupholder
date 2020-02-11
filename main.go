@@ -56,7 +56,8 @@ func main() {
 			for _, deviceFilename := range c.Args().Slice() {
 				err = ejectDevice(o, deviceFilename)
 				if err != nil {
-					break
+					o.Printf("<darkred>%s</darkred>\n", err)
+					continue
 				}
 			}
 			return err
