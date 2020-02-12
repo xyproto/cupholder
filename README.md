@@ -2,7 +2,7 @@
 
 Eject the CD tray, on Linux, using only Go.
 
-If you have a server room with many servers with CD ROMs, this can be used for finding a specific server.
+If you have access to an unorganized server room with many servers with CD ROMs, this can be used for finding a specific server.
 
 It can also be used for providing an additional tea or coffee cup holder to your desktop setup.
 
