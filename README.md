@@ -6,6 +6,8 @@ If you have a server room with many servers with CD ROMs, this can be used for f
 
 It can also be used for providing an additional tea or coffee cup holder to your desktop setup.
 
+This is mainly an experiment in calling ioctls without using C, though.
+
 ## Usage
 
     ./cupholder
@@ -42,6 +44,6 @@ Replace `localhost` with the hostname or IP address of the server where `cuphold
 
 * Version: 1.0.0
 * License: GPL2
-* Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
+* Author: Alexander F. Rødseth
 
 
