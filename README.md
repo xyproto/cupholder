@@ -10,11 +10,15 @@ This is mainly an experiment in calling ioctls without using C, though.
 
 ## Usage
 
-    ./cupholder
+    cupholder
 
-Or
+Or when building a project that takes a while, as a notification:
 
-    ./cupholder /dev/cdrom
+    make && cupholder
+
+Or for specifying a specific device:
+
+    cupholder /dev/cdrom
 
 All arguments are treated as device filenames.
 
