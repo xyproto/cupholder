@@ -79,7 +79,7 @@ func main() {
 		Flags: []cli.Flag{
 			&cli.BoolFlag{Name: "silent", Aliases: []string{"s"}},
 			&cli.BoolFlag{Name: "version", Aliases: []string{"V"}},
-			&cli.BoolFlag{Name: "listen", Aliases: []string{"l"}},
+			&cli.BoolFlag{Name: "server", Aliases: []string{"l", "listen", "web", "http"}},
 		},
 		Action: func(c *cli.Context) error {
 			if c.Bool("version") {
@@ -95,7 +95,7 @@ func main() {
 			if c.NArg() > 0 {
 				deviceFilenames = c.Args().Slice()
 			}
-			if c.Bool("listen") {
+			if c.Bool("server") {
 				// Set up a HTTP server that is ready to eject the CD ROM at requests on port 0x0CD0 (3280)
 				http.HandleFunc("/", generateEjectionHandler(deviceFilenames))
 				o.Println("<blue>Listening for ejection requests at <yellow>http://localhost:3280/<off>")
