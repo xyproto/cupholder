@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-const versionString = "cupholder 1.0.0"
+const versionString = "cupholder 1.1.0"
 
 func ejectDevice(o *textoutput.TextOutput, deviceFilename string) error {
 	o.Printf("<darkgray>[<blue>cupholder<darkgray>]\t\t<darkgray>Ejecting <yellow>%s<darkgray>... <off>", deviceFilename)
