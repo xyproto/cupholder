@@ -1,12 +1,12 @@
 # cupholder [![Build Status](https://travis-ci.com/xyproto/cupholder.svg?branch=master)](https://travis-ci.com/xyproto/cupholder) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/cupholder)](https://goreportcard.com/report/github.com/xyproto/cupholder) [![License](https://img.shields.io/badge/License-GPL2-brightgreen)](https://raw.githubusercontent.com/xyproto/cupholder/master/LICENSE)
 
-Eject the CD tray, on Linux.
+Eject the CD tray on Linux.
 
-If you have access to an unorganized server room with many servers with CD ROMs, this can be used for finding a specific server.
+`cupholder` can be useful:
 
-It can also be used for providing an additional tea or coffee cup holder to your desktop setup.
-
-This is mainly an experiment in calling ioctls without using C, though.
+* If you have a large server room with many computers with CD trays, this can be used for finding a specific server.
+* If you need an additional tea or coffee cup holder for your desktop.
+* If you need an example for how to call `ioctls` without using C.
 
 ## Usage
 
@@ -48,4 +48,4 @@ Replace `localhost` with the hostname or IP address of the server where `cuphold
 
 * Version: 1.1.0
 * License: GPL2
-* Author: Alexander F. Rødseth
+* Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
