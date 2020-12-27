@@ -1,16 +1,14 @@
-# cdrom
+# CD-ROM
 
-## Go package that provides:
+This is a Go package that provides:
 
-* The constants from linux/cdrom.h
-* A function for ejecting the CD tray
+* Functionality for ejecting the CD tray.
+* The constants from `linux/cdrom.h`.
 
-## Online documentation
-
-[GoDoc](https://godoc.org/github.com/xyproto/cdrom)
+[Online Documentation](https://godoc.org/github.com/xyproto/cdrom)
 
 ## General info
 
-* Version: 1.2.0
+* Version: 1.3.0
 * License: GPL2
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;

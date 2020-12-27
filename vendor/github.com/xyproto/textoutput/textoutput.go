@@ -1,3 +1,5 @@
+// +build !windows
+
 // Package textoutput offers a simple way to use vt100 and output colored text
 package textoutput
 

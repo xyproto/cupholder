@@ -11,11 +11,7 @@ type CD struct {
 
 // New opens /dev/cdrom and returns a struct with the file descriptor
 func New() (*CD, error) {
-	fd, err := syscall.Open("/dev/cdrom", syscall.O_RDONLY|syscall.O_NONBLOCK, 0644)
-	if err != nil {
-		return nil, err
-	}
-	return &CD{fileDescriptor: fd}, nil
+	return NewFile("/dev/cdrom")
 }
 
 // NewFile opens the given device filename and returns a struct with the file descriptor
