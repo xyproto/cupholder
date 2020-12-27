@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+	"os"
+
 	"github.com/urfave/cli/v2"
 	"github.com/xyproto/cdrom"
 	"github.com/xyproto/textoutput"
-	"net/http"
-	"os"
 )
 
 const versionString = "cupholder 1.1.0"
@@ -100,19 +101,18 @@ func main() {
 				http.HandleFunc("/", generateEjectionHandler(deviceFilenames))
 				o.Println("<blue>Listening for ejection requests at <yellow>http://localhost:3280/<off>")
 				return http.ListenAndServe(":3280", nil)
-			} else {
-				// Treat all arguments as device files that shall be ejected
-				var err error
-				for _, deviceFilename := range deviceFilenames {
-
-					err = ejectDevice(o, deviceFilename)
-					if err != nil {
-						o.Printf("<darkred>%s</darkred>\n", err)
-						continue
-					}
-				}
-				return err
 			}
+			// Treat all arguments as device files that shall be ejected
+			var err error
+			for _, deviceFilename := range deviceFilenames {
+
+				err = ejectDevice(o, deviceFilename)
+				if err != nil {
+					o.Printf("<darkred>%s</darkred>\n", err)
+					continue
+				}
+			}
+			return err
 		},
 	}).Run(os.Args); appErr != nil {
 		o.ErrExit(appErr.Error())
