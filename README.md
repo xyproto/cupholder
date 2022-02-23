@@ -16,7 +16,7 @@ Or when building a project that takes a while, as a notification:
 
     make && cupholder
 
-Or for specifying a specific device:
+For specifying a specific device:
 
     cupholder /dev/cdrom
 
