@@ -6,13 +6,13 @@ Eject the CD tray on Linux.
 
 * If you have a large server room with many computers with CD trays, this can be used for finding a specific server.
 * If you need an additional tea or coffee cup holder for your desktop.
-* If you need an example for how to call `ioctls` without using C.
+* If you need an example for how to call `ioctls` from Go without using C.
 
 ## Usage
 
     cupholder
 
-Or when building a project that takes a while, as a notification:
+Or when building a project that takes a while, as a notification utility:
 
     make && cupholder
 
