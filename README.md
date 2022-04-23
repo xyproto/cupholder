@@ -1,12 +1,11 @@
 # cupholder [![Build](https://github.com/xyproto/cupholder/actions/workflows/test.yml/badge.svg)](https://github.com/xyproto/cupholder/actions/workflows/test.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/cupholder)](https://goreportcard.com/report/github.com/xyproto/cupholder) [![License](https://img.shields.io/badge/License-GPL2-brightgreen)](https://raw.githubusercontent.com/xyproto/cupholder/master/LICENSE)
 
-Eject the CD tray on Linux.
+Local or remote CD tray ejection, for Linux.
 
 `cupholder` can be useful:
 
 * If you have a large server room with many computers with CD trays, this can be used for finding a specific server.
 * If you need an example for how to call `ioctls` from Go without using C.
-* If you need an additional tea or coffee cup holder for your desktop.
 
 ## Usage
 
@@ -14,7 +13,7 @@ Eject the CD tray on Linux.
 
 Or when building a project that takes a while, as a notification utility:
 
-    make && cupholder
+    <build command>; cupholder
 
 For specifying a specific device:
 
