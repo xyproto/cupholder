@@ -5,7 +5,7 @@ Local or remote CD tray ejection, for Linux.
 `cupholder` can be useful:
 
 * If you have a large server room with many computers with CD trays, this can be used for finding a specific server.
-* If you need an example for how to call `ioctls` from Go without using C.
+* If you need an example for how to call `ioctls` from Go without using C (https://github.com/xyproto/cdrom/blob/main/cd.go).
 
 ## Usage
 
