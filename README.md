@@ -1,5 +1,5 @@
 # cupholder
-[![Build](https://github.com/xyproto/cupholder/actions/workflows/test.yml/badge.svg)](https://github.com/xyproto/cupholder/actions/workflows/test.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/cupholder)](https://goreportcard.com/report/github.com/xyproto/cupholder) [![License](https://img.shields.io/badge/License-GPL2-brightgreen)](https://raw.githubusercontent.com/xyproto/cupholder/master/LICENSE)
+[![Build](https://github.com/xyproto/cupholder/actions/workflows/build.yml/badge.svg)](https://github.com/xyproto/cupholder/actions/workflows/build.yml) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/cupholder)](https://goreportcard.com/report/github.com/xyproto/cupholder) [![License](https://img.shields.io/badge/License-GPL2-brightgreen)](https://raw.githubusercontent.com/xyproto/cupholder/master/LICENSE)
 
 Local or remote CD tray ejection, for Linux.
 
