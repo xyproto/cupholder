@@ -12,8 +12,16 @@ import (
 
 const versionString = "cupholder 1.2.1"
 
-func ejectDevice(o *vt.TextOutput, deviceFilename string) error {
+func ejectDevice(o *vt.TextOutput, deviceFilename string) (err error) {
 	o.Printf("<darkgray>[<blue>cupholder<darkgray>]\t\t<darkgray>Ejecting <yellow>%s<darkgray>... <off>", deviceFilename)
+
+	// Recover from any panic in the cdrom package and turn it into an error
+	defer func() {
+		if r := recover(); r != nil {
+			o.Print("<red>error:</red> ")
+			err = fmt.Errorf("%v", r)
+		}
+	}()
 
 	// Opening
 	cd, err := cdrom.NewFile(deviceFilename)
@@ -47,27 +55,37 @@ func generateEjectionHandler(deviceFilenames []string) func(w http.ResponseWrite
 		for _, deviceFilename := range deviceFilenames {
 			fmt.Fprintf(w, "<strong>[cupholder]</strong>&nbsp;&nbsp;<code>Ejecting %s...</code> ", deviceFilename)
 
-			// Opening
-			cd, err := cdrom.NewFile(deviceFilename)
-			if err != nil {
-				fmt.Fprintf(w, "<code>error: %v</code><br>", err)
-			}
+			// Handle one device, recovering from any panic in the cdrom package
+			func() {
+				defer func() {
+					if r := recover(); r != nil {
+						fmt.Fprintf(w, "<code>error: %v</code><br>", r)
+					}
+				}()
 
-			// Ejecting
-			if err := cd.Eject(); err != nil {
-				fmt.Fprintf(w, "<code>error: %v</code><br>", err)
-				_ = cd.Done() // Try closing, but only output the other error
-				continue
-			}
+				// Opening
+				cd, err := cdrom.NewFile(deviceFilename)
+				if err != nil {
+					fmt.Fprintf(w, "<code>error: %v</code><br>", err)
+					return
+				}
 
-			// Closing
-			if err := cd.Done(); err != nil {
-				fmt.Fprintf(w, "<code>error: %v</code><br>", err)
-				continue
-			}
+				// Ejecting
+				if err := cd.Eject(); err != nil {
+					fmt.Fprintf(w, "<code>error: %v</code><br>", err)
+					_ = cd.Done() // Try closing, but only output the other error
+					return
+				}
 
-			// All done, for this device filename
-			fmt.Fprintln(w, "<code>ok</code><br>")
+				// Closing
+				if err := cd.Done(); err != nil {
+					fmt.Fprintf(w, "<code>error: %v</code><br>", err)
+					return
+				}
+
+				// All done, for this device filename
+				fmt.Fprintln(w, "<code>ok</code><br>")
+			}()
 		}
 	}
 }
