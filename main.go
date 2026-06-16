@@ -10,7 +10,7 @@ import (
 	"github.com/xyproto/vt"
 )
 
-const versionString = "cupholder 1.2.1"
+const versionString = "cupholder 1.2.3"
 
 func ejectDevice(o *vt.TextOutput, deviceFilename string) (err error) {
 	o.Printf("<darkgray>[<blue>cupholder<darkgray>]\t\t<darkgray>Ejecting <yellow>%s<darkgray>... <off>", deviceFilename)

@@ -46,6 +46,6 @@ Replace `localhost` with the hostname or IP address of the server where `cuphold
 
 ## General info
 
-* Version: 1.2.2
+* Version: 1.2.3
 * License: GPL2
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
