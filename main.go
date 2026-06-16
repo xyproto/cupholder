@@ -7,12 +7,12 @@ import (
 
 	"github.com/urfave/cli/v2"
 	"github.com/xyproto/cdrom"
-	"github.com/xyproto/textoutput"
+	"github.com/xyproto/vt"
 )
 
 const versionString = "cupholder 1.2.1"
 
-func ejectDevice(o *textoutput.TextOutput, deviceFilename string) error {
+func ejectDevice(o *vt.TextOutput, deviceFilename string) error {
 	o.Printf("<darkgray>[<blue>cupholder<darkgray>]\t\t<darkgray>Ejecting <yellow>%s<darkgray>... <off>", deviceFilename)
 
 	// Opening
@@ -73,7 +73,7 @@ func generateEjectionHandler(deviceFilenames []string) func(w http.ResponseWrite
 }
 
 func main() {
-	o := textoutput.New()
+	o := vt.New()
 	if appErr := (&cli.App{
 		Name:  "cupholder",
 		Usage: "eject the CD tray (or other trays, given a device file)",
