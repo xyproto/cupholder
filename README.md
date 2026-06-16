@@ -42,10 +42,10 @@ Replace `localhost` with the hostname or IP address of the server where `cuphold
 
 ## Requirements
 
-* Go 1.18 or later
+* Go 1.25 or later
 
 ## General info
 
-* Version: 1.2.1
+* Version: 1.2.2
 * License: GPL2
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
